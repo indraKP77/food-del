@@ -6,7 +6,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://food-delindra.netlify.app"
+    const url = "https://food-del-backend-7drc.onrender.com"
     const [token,setToken] = useState("")
     const [food_list,setFoodList] = useState([])
 
