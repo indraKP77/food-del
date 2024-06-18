@@ -1,7 +1,11 @@
 import { log } from "console";
 import foodModel from "../models/foodModel.js";
 import fs from 'fs'
+import express from "express"
+import bodyParser from "body-parser";
 
+const app = express()
+app.use(bodyParser.json())
 
 // add food item
 const addFood = async (req,res) => {
@@ -38,6 +42,8 @@ const listFood = async (req,res) => {
     }
 }
 
+
+
 // remove food item
 
 const removeFood = async (req,res) => {
@@ -52,5 +58,7 @@ const removeFood = async (req,res) => {
         res.json({success:false,message:"Error"})
     }
 }
+
+
 
 export {addFood,listFood,removeFood}
